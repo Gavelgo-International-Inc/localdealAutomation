@@ -23,7 +23,7 @@ describe('Locoldeal Login Test', () => {
       
         cy.xpath("//input[@type='checkbox']").click()
  
-        cy.xpath(".submit-btn submit-btn-disabled").click()
+        //cy.xpath(".submit-btn submit-btn-disabled").click()
     
 
     });

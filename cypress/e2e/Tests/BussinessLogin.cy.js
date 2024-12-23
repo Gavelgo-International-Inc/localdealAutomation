@@ -47,12 +47,12 @@ describe('Bussiness Login Test Suite', () => {
             login.getLoginErrorMessage().should('be.visible');
           })
  it('Verify Create New Account link on Login Page', () => {
-  cy.visit(Cypress.env('url'));
-  login.getBussinessLoginButton().click();
-  cy.wait(2000)
-  login.getHeaderText().should('be.visible');
-  login.getBussinessLoginText().should ('have.text', 'Business Log In')
-  login.getSignUPLink().should('be.visible')
+      cy.visit(Cypress.env('url'));
+      login.getBussinessLoginButton().click();
+      cy.wait(2000)
+      login.getHeaderText().should('be.visible');
+      login.getBussinessLoginText().should ('have.text', 'Business Log In')
+      login.getSignUPLink().should('be.visible')
          
 })
 

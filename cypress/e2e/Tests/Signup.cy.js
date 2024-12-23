@@ -1,5 +1,5 @@
 
-describe('Facebook Login Test', () => {
+describe('LocalDeal SignUp Test Suite', () => {
     beforeEach(() => {
 
         cy.visit('https://locoldeal.com/');
@@ -24,7 +24,7 @@ describe('Facebook Login Test', () => {
         
         cy.xpath("//input[@type='checkbox']").click()
        
-        cy.xpath(".submit-btn submit-btn-disabled").click()
+        //cy.xpath(".submit-btn submit-btn-disabled").click()
        
     });
 

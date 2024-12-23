@@ -9,6 +9,8 @@ module.exports = defineConfig({
     url: "https://locoldeal.com/",
   },
   e2e: {
+    viewportWidth: 1920,
+    viewportHeight: 1080,
     specPattern: 'cypress/e2e/Tests/*.cy.js', // Correct placement of specPattern
 
     setupNodeEvents(on, config) {

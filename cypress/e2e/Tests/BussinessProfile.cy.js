@@ -10,8 +10,7 @@ describe('Bussiness Profile Suite', () => {
 
  it('Verify Profile and Brand Update', () => {
 
-      cy.login('testuser', 'password'); // Replace with actual test credentials
-      cy.wait(5000)
+      cy.login('testuser', 'password');
       bussnessMenus.getProfileMenu().click();
       bussnessMenus.brandText().should('be.visible')
       bussnessMenus.getProfileBrandMenu().click();
@@ -26,15 +25,42 @@ describe('Bussiness Profile Suite', () => {
 
 it('Verify Upload Brand Image', () => {
 
-        cy.login('testuser', 'password'); // Replace with actual test credentials
+        cy.login('testuser', 'password'); 
         cy.wait(5000)
         bussnessMenus.getProfileMenu().click();
         bussnessMenus.getSellerPhotoMenu().click();
-
  const fileName = 'Upload.png';
         bussnessMenus.uploadBrandImage().attachFile(fileName);
+      });
+
+
+  it('Verify Online Store Location', () => {
+
+        cy.login('testuser', 'password'); 
+        cy.wait(5000)
+        bussnessMenus.getProfileMenu().click();
+        bussnessMenus.getStoreLocation().click();
+        bussnessMenus.enterStoreName();
+        bussnessMenus.selectOnlineBusinessType(),
+        bussnessMenus.getBussinessHourText();
+        bussnessMenus.getAvailableTime();
+        bussnessMenus.clickSaveBussinesslocation();
   
       });
+
+  it('Verify Offline Store Location', () => {
+
+        cy.login('testuser', 'password'); 
+        cy.wait(5000)
+        bussnessMenus.getProfileMenu().click();
+        bussnessMenus.getStoreLocation().click();
+        bussnessMenus.enterStoreName();
+        bussnessMenus.selectOfflineBusinessType();
+        bussnessMenus.UpdateOfflineBussinessAddress()
+        bussnessMenus.clickSaveBussinesslocation();
+  
+      });
+
 
 
 
